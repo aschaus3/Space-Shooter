@@ -139,8 +139,8 @@ MonoBehaviour:
   radius: -1
   camWidth: 0
   camHeight: 0
-  keepOnScreen: 1
-  isOnScreen: 0
+  keepOnScreen: 0
+  isOnScreen: 1
   offRight: 0
   offLeft: 0
   offUp: 0
