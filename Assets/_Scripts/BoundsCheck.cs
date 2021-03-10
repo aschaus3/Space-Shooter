@@ -17,7 +17,7 @@ public class BoundsCheck : MonoBehaviour
         camWidth = camHeight * Camera.main.aspect;
     }
 
-    private void LateUpdate()
+    private void LateUpdate() //Checking if the hero is out of view of the camera
     {
         Vector3 pos = transform.position;
         offDown = offLeft = offRight = offUp = false;

@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
         boundsCheck = GetComponent<BoundsCheck>();
     }
 
-    public Vector3 pos
+    public Vector3 pos //Responsible for enemy movement
     {
         get { return (this.transform.position); }
         set { this.transform.position = value; }
@@ -28,7 +28,7 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject); //Destroys the enemy once it goes off the screen   
     }
 
-    public virtual void Move()
+    public virtual void Move() //Make all enemeys move down in the y direction
     {
         Vector3 tempPos = pos;
         tempPos.y -= speed * Time.deltaTime;

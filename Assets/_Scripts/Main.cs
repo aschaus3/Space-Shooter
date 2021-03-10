@@ -23,12 +23,12 @@ public class Main : MonoBehaviour
     {
         int choose = Random.Range(0, prefabEnemies.Length);
         GameObject go = Instantiate<GameObject>(prefabEnemies[choose]);
-        //Picks a random enemy and then instantiates it
+            //Picks a random enemy and then instantiates it
 
         float enemyPadding = enemyDefaultPadding;
         if (go.GetComponent<BoundsCheck>() != null)
             enemyPadding = Mathf.Abs(go.GetComponent<BoundsCheck>().radius);
-        //Randomly choose an x postition for the new enemy
+            //Randomly choose an x postition for the new enemy
 
         Vector3 pos = Vector3.zero;
         float xMin = -boundCheck.camWidth + enemyPadding;
@@ -46,7 +46,7 @@ public class Main : MonoBehaviour
         Invoke("Restart", delay);
     }
 
-    public void Restart()
+    public void Restart() //Resets the game
     {
         SceneManager.LoadScene("SampleScene");
     }

@@ -11,7 +11,7 @@ public class Projectile : MonoBehaviour
         bndCheck = GetComponent<BoundsCheck>();
     }
 
-    private void Update()
+    private void Update() //Checks if the bullet leaves the top of the screen
     {
         if (bndCheck.offUp)
             Destroy(gameObject);

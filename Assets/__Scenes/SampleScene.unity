@@ -469,7 +469,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 90070085539253305, guid: 71f9ed0cf50754abf89b24c366b86a0e,
     type: 3}
   projectileSpeed: 40
-  _healthLevel: 0
+  _healthLevel: 1
 --- !u!4 &1217103959
 Transform:
   m_ObjectHideFlags: 0

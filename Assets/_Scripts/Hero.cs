@@ -43,12 +43,12 @@ public class Hero : MonoBehaviour
         transform.rotation = Quaternion.Euler(xAxis * pitchMult, yAxis * rollMult,0);
             //Slightly rotates the ship
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space)) //Fire bullet if the space bar is pressed
         {
             TempFire();
         }
 
-        void TempFire()
+        void TempFire() //Code for the bullet
         {
             GameObject projGO = Instantiate<GameObject>(projectilePrefab);
             projGO.transform.position = transform.position;
@@ -57,7 +57,7 @@ public class Hero : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)  //Kills the hero ship if it collides with an enemy
     {
         Transform rootT = other.gameObject.transform.root;
         GameObject go = rootT.gameObject;
@@ -76,7 +76,7 @@ public class Hero : MonoBehaviour
             print("Triggered by non-Enemy: " + go.name);
     }
 
-    public float healthLevel
+    public float healthLevel //Keeps record of the hero health level
     {
         get
         {
@@ -85,10 +85,10 @@ public class Hero : MonoBehaviour
         set
         {
             _healthLevel = Mathf.Min(value, 4);
-            if (value < 0)
+            if (value < 1)
             {
                 Destroy(this.gameObject);
-                Main.S.DelayedRestart(restartDelay);
+                Main.S.DelayedRestart(restartDelay); //Calls method in main, restarts the game
             }
  
         }

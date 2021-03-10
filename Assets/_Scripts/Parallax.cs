@@ -22,7 +22,7 @@ public class Parallax : MonoBehaviour
 
     }
 
-    private void Update()
+    private void Update() //Resposible for the moving background
     {
         float tY, tX = 0;
         tY = Time.time * scrollSpeed % panelHt + (panelHt * .5f);
